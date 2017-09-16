@@ -14,6 +14,7 @@
 		552B59C21F6DCD0D00B98E2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 552B59C01F6DCD0D00B98E2A /* LaunchScreen.storyboard */; };
 		552B59CD1F6DCD0D00B98E2A /* SleepWellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B59CC1F6DCD0D00B98E2A /* SleepWellTests.swift */; };
 		552B59D81F6DCD0D00B98E2A /* SleepWellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B59D71F6DCD0D00B98E2A /* SleepWellUITests.swift */; };
+		552B59E61F6DD33800B98E2A /* AddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B59E51F6DD33800B98E2A /* AddEntryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		552B59D31F6DCD0D00B98E2A /* SleepWellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SleepWellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		552B59D71F6DCD0D00B98E2A /* SleepWellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepWellUITests.swift; sourceTree = "<group>"; };
 		552B59D91F6DCD0D00B98E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		552B59E51F6DD33800B98E2A /* AddEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				552B59BE1F6DCD0D00B98E2A /* Assets.xcassets */,
 				552B59C01F6DCD0D00B98E2A /* LaunchScreen.storyboard */,
 				552B59C31F6DCD0D00B98E2A /* Info.plist */,
+				552B59E51F6DD33800B98E2A /* AddEntryViewController.swift */,
 			);
 			path = SleepWell;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				552B59E61F6DD33800B98E2A /* AddEntryViewController.swift in Sources */,
 				552B59BA1F6DCD0C00B98E2A /* ViewController.swift in Sources */,
 				552B59B81F6DCD0C00B98E2A /* AppDelegate.swift in Sources */,
 			);
@@ -507,6 +511,7 @@
 				552B59DE1F6DCD0D00B98E2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		552B59DF1F6DCD0D00B98E2A /* Build configuration list for PBXNativeTarget "SleepWellTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +520,7 @@
 				552B59E11F6DCD0D00B98E2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		552B59E21F6DCD0D00B98E2A /* Build configuration list for PBXNativeTarget "SleepWellUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +529,7 @@
 				552B59E41F6DCD0D00B98E2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
