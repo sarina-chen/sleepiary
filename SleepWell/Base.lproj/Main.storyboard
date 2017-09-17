@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="1036" y="38.23088455772114"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Record Table View Controller-->
         <scene sceneID="6UV-gu-LI9">
             <objects>
-                <tableViewController id="03W-p6-yHH" sceneMemberID="viewController">
+                <tableViewController id="03W-p6-yHH" customClass="RecordTableViewController" customModule="SleepWell" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="kdX-wi-Rjl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

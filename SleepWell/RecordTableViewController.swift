@@ -9,9 +9,13 @@
 import UIKit
 
 class RecordTableViewController: UITableViewController {
+	
+	var records = [SleepEntry]();
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		loadSampleRecords()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -28,24 +32,43 @@ class RecordTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return records.count
     }
 
-    /*
+	
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+		let cellIdentifier = "RecordTableViewCell"
+		
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? RecordTableViewCell else {
+			fatalError("The cell is not an instance of RecordTableViewCell")
+		}
 
-        // Configure the cell...
-
+		let record = records[indexPath.row]
+		
+		let dateFormatter = DateFormatter()
+		dateFormatter.dateStyle = .medium
+		dateFormatter.timeStyle = .none
+		
+		cell.dateLabel.text = dateFormatter.string(from: record.getRecordDate())
+		cell.photoImageView.image = getImageForRating(record.getRating())
+		
         return cell
     }
-    */
+	
+	func getImageForRating(_ rating: Int) -> UIImage {
+		let photo1 = UIImage(named: "FaceImage")
+		let photo2 = UIImage(named: "PatternImage")
+		
+		if (rating < 3) {
+			return photo1!
+		}
+		return photo2!
+	}
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -92,4 +115,13 @@ class RecordTableViewController: UITableViewController {
     }
     */
 
+	private func loadSampleRecords() {
+		
+		let record1 = SleepEntry(recordDate: Date(timeIntervalSinceReferenceDate: 123456789), start: Date(timeIntervalSinceReferenceDate: 123456789), end: Date(timeIntervalSinceReferenceDate: 123456789), rating: 5)
+		let record2 = SleepEntry(recordDate: Date(timeIntervalSinceReferenceDate: 1234567891), start: Date(timeIntervalSinceReferenceDate: 12345678000), end: Date(timeIntervalSinceReferenceDate: 1234563445), rating: 2)
+		let record3 = SleepEntry(recordDate: Date(timeIntervalSinceReferenceDate: 1123456789), start: Date(timeIntervalSinceReferenceDate: 2123456789), end: Date(timeIntervalSinceReferenceDate: 3123456789), rating: 1)
+		
+		records += [record1,record2,record3]
+	}
+	
 }
