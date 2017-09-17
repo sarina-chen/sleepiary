@@ -6,10 +6,11 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Welcome!-->
+        <!--Welcome-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SleepWell" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,32 +22,152 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVi-Bm-10o">
-                                <rect key="frame" x="138" y="318" width="80" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXG-Ai-nav" customClass="CSAnimationView">
+                                <rect key="frame" x="-1" y="455" width="376" height="212"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVi-Bm-10o">
+                                        <rect key="frame" x="-1" y="74" width="377" height="50"/>
+                                        <color key="backgroundColor" red="0.61729944073199872" green="0.74731448334274519" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="m80-go-njG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="22"/>
+                                        <state key="normal" title="See Past Diaries">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="viewHistory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EPd-z0-Ue2"/>
+                                            <segue destination="03W-p6-yHH" kind="show" identifier="goSeeHistory" id="AdQ-Ay-mf9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2B-V0-d7E">
+                                        <rect key="frame" x="-1" y="16" width="377" height="50"/>
+                                        <color key="backgroundColor" red="0.62719112629999996" green="0.85715115070000003" blue="0.98669451480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Yeb-8e-Gbb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="22"/>
+                                        <state key="normal" title="Add Sleep Diary">
+                                            <color key="titleColor" red="0.99682224310000001" green="0.97853952830000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addEntry:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kwe-JQ-6WX"/>
+                                            <segue destination="CmB-XW-3yd" kind="show" id="Wuc-7D-VEk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwh-k8-T0R">
+                                        <rect key="frame" x="-1" y="132" width="377" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.76258287908121702" green="0.77851301884320889" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="22"/>
+                                        <state key="normal" title="View Analysis">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="V2B-V0-d7E" firstAttribute="centerX" secondItem="hXG-Ai-nav" secondAttribute="centerX" id="2Wm-9G-tBJ"/>
+                                    <constraint firstItem="V2B-V0-d7E" firstAttribute="trailing" secondItem="pVi-Bm-10o" secondAttribute="trailing" id="5wc-MK-Uck"/>
+                                    <constraint firstItem="V2B-V0-d7E" firstAttribute="centerX" secondItem="pVi-Bm-10o" secondAttribute="centerX" id="7a7-dT-D3n"/>
+                                    <constraint firstItem="pVi-Bm-10o" firstAttribute="top" secondItem="V2B-V0-d7E" secondAttribute="bottom" constant="8" id="YLz-Nn-ydP"/>
+                                    <constraint firstItem="V2B-V0-d7E" firstAttribute="top" secondItem="hXG-Ai-nav" secondAttribute="topMargin" constant="8" id="mhO-XC-tcS"/>
+                                    <constraint firstAttribute="trailing" secondItem="V2B-V0-d7E" secondAttribute="trailing" id="nX5-KF-CfP"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="type" value="fadeInUp"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vte-9y-ou7" customClass="CSAnimationView">
+                                <rect key="frame" x="19" y="87" width="337" height="166"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7Sv-QK-NoQ">
+                                        <rect key="frame" x="29" y="67" width="278" height="62"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="0.56474064089999998" green="0.56474064089999998" blue="0.56474064089999998" alpha="0.60000002379999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What are you thankful for today?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBQ-iJ-I3X">
+                                        <rect key="frame" x="8" y="5" width="311" height="68"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="23"/>
+                                        <color key="textColor" red="0.48090610047032972" green="0.68343634829030864" blue="0.90315672588832485" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrc-hv-RHP">
+                                        <rect key="frame" x="140" y="128" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.82268785478315909" green="0.92804373655877836" blue="0.95171716370558379" alpha="0.57534246575342463" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="15"/>
+                                        <state key="normal" title="Add"/>
+                                        <connections>
+                                            <action selector="addThankfulText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6AK-uQ-B9P"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="type" value="fadeIn"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Asu-3j-bE3">
+                                <rect key="frame" x="19" y="275" width="337" height="182"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="See History"/>
-                                <connections>
-                                    <action selector="viewHistory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EPd-z0-Ue2"/>
-                                    <segue destination="03W-p6-yHH" kind="show" identifier="goSeeHistory" id="AdQ-Ay-mf9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2B-V0-d7E">
-                                <rect key="frame" x="138" y="225" width="68" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Entry"/>
-                                <connections>
-                                    <action selector="addEntry:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kwe-JQ-6WX"/>
-                                    <segue destination="CmB-XW-3yd" kind="show" id="Wuc-7D-VEk"/>
-                                </connections>
-                            </button>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enjoy the little things, for one day you may look back and realize they were the big things.  - Robert Brault" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFh-hv-U8U">
+                                        <rect key="frame" x="18" y="25" width="311" height="157"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Italic" family="Palatino" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wHn-ol-CYV">
+                                        <rect key="frame" x="0.0" y="0.0" width="337" height="182"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.85545668071763736" blue="0.81916820556279357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vte-9y-ou7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="3" id="6kz-ea-DB8"/>
+                            <constraint firstItem="hXG-Ai-nav" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="455" id="AKb-ZX-8uT"/>
+                            <constraint firstAttribute="trailing" secondItem="hXG-Ai-nav" secondAttribute="trailing" id="C9c-IG-COJ"/>
+                            <constraint firstItem="vte-9y-ou7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="23" id="JVh-AK-xcB"/>
+                            <constraint firstItem="hXG-Ai-nav" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qno-cq-62Z"/>
+                            <constraint firstItem="vte-9y-ou7" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-3" id="XTt-XD-A7o"/>
+                            <constraint firstAttribute="bottom" secondItem="vte-9y-ou7" secondAttribute="bottom" constant="414" id="pqg-yu-Xe5"/>
+                            <constraint firstItem="hXG-Ai-nav" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="xuv-Xj-szA"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Welcome!" id="lcG-TH-6Mg"/>
+                    <navigationItem key="navigationItem" title="Welcome" id="lcG-TH-6Mg"/>
+                    <connections>
+                        <outlet property="addThankfulTextButton" destination="nrc-hv-RHP" id="xGp-e3-1rK"/>
+                        <outlet property="inspiringQuote" destination="MFh-hv-U8U" id="zub-b1-xEN"/>
+                        <outlet property="thankfulQuestion" destination="fBQ-iJ-I3X" id="eDP-Rc-oPz"/>
+                        <outlet property="thankfulTextView" destination="7Sv-QK-NoQ" id="TmH-XU-Ndo"/>
+                        <outlet property="thankfulTextsTableView" destination="wHn-ol-CYV" id="ZnJ-Qb-tGQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036" y="38.23088455772114"/>
+            <point key="canvasLocation" x="1277.5999999999999" y="57.121439280359823"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="6UV-gu-LI9">
