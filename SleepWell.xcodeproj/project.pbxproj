@@ -16,8 +16,11 @@
 		552B59D81F6DCD0D00B98E2A /* SleepWellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B59D71F6DCD0D00B98E2A /* SleepWellUITests.swift */; };
 		552B59E61F6DD33800B98E2A /* AddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B59E51F6DD33800B98E2A /* AddEntryViewController.swift */; };
 		552B59EA1F6E0D4200B98E2A /* ThankfulText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B59E91F6E0D4200B98E2A /* ThankfulText.swift */; };
-		CD7C6B9BDAA43BD966605FD7 /* Pods_SleepWell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE8FAB0300119024E40A24B /* Pods_SleepWell.framework */; };
 		890465D91F6DF4D900E000CA /* SleepEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890465D81F6DF4D900E000CA /* SleepEntry.swift */; };
+		890465DD1F6E533900E000CA /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890465DC1F6E533900E000CA /* AnalysisViewController.swift */; };
+		890465DF1F6E5EBC00E000CA /* DataVisualizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890465DE1F6E5EBC00E000CA /* DataVisualizationController.swift */; };
+		890465E11F6E5FC100E000CA /* GoodBadSleepController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890465E01F6E5FC100E000CA /* GoodBadSleepController.swift */; };
+		CD7C6B9BDAA43BD966605FD7 /* Pods_SleepWell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE8FAB0300119024E40A24B /* Pods_SleepWell.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +58,11 @@
 		552B59E51F6DD33800B98E2A /* AddEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEntryViewController.swift; sourceTree = "<group>"; };
 		552B59E91F6E0D4200B98E2A /* ThankfulText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThankfulText.swift; sourceTree = "<group>"; };
 		87AC35CC51AC2A3FF3D1EFB6 /* Pods-SleepWell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepWell.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SleepWell/Pods-SleepWell.debug.xcconfig"; sourceTree = "<group>"; };
-		ABE8FAB0300119024E40A24B /* Pods_SleepWell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SleepWell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		890465D81F6DF4D900E000CA /* SleepEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepEntry.swift; sourceTree = "<group>"; };
+		890465DC1F6E533900E000CA /* AnalysisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
+		890465DE1F6E5EBC00E000CA /* DataVisualizationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataVisualizationController.swift; sourceTree = "<group>"; };
+		890465E01F6E5FC100E000CA /* GoodBadSleepController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodBadSleepController.swift; sourceTree = "<group>"; };
+		ABE8FAB0300119024E40A24B /* Pods_SleepWell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SleepWell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,9 @@
 				552B59C31F6DCD0D00B98E2A /* Info.plist */,
 				552B59E51F6DD33800B98E2A /* AddEntryViewController.swift */,
 				890465D81F6DF4D900E000CA /* SleepEntry.swift */,
+				890465DC1F6E533900E000CA /* AnalysisViewController.swift */,
+				890465DE1F6E5EBC00E000CA /* DataVisualizationController.swift */,
+				890465E01F6E5FC100E000CA /* GoodBadSleepController.swift */,
 			);
 			path = SleepWell;
 			sourceTree = "<group>";
@@ -349,8 +358,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				890465DF1F6E5EBC00E000CA /* DataVisualizationController.swift in Sources */,
 				552B59E61F6DD33800B98E2A /* AddEntryViewController.swift in Sources */,
 				552B59BA1F6DCD0C00B98E2A /* ViewController.swift in Sources */,
+				890465DD1F6E533900E000CA /* AnalysisViewController.swift in Sources */,
+				890465E11F6E5FC100E000CA /* GoodBadSleepController.swift in Sources */,
 				890465D91F6DF4D900E000CA /* SleepEntry.swift in Sources */,
 				552B59B81F6DCD0C00B98E2A /* AppDelegate.swift in Sources */,
 				552B59EA1F6E0D4200B98E2A /* ThankfulText.swift in Sources */,
