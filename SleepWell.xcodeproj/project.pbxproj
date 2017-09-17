@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C1501EB1F6E067000FE0B5F /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1501EA1F6E067000FE0B5F /* RecordTableViewCell.swift */; };
+		3C1501ED1F6E0B6F00FE0B5F /* RecordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1501EC1F6E0B6F00FE0B5F /* RecordTableViewController.swift */; };
 		552B59B81F6DCD0C00B98E2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B59B71F6DCD0C00B98E2A /* AppDelegate.swift */; };
 		552B59BA1F6DCD0C00B98E2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B59B91F6DCD0C00B98E2A /* ViewController.swift */; };
 		552B59BD1F6DCD0C00B98E2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 552B59BB1F6DCD0C00B98E2A /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C1501EA1F6E067000FE0B5F /* RecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
+		3C1501EC1F6E0B6F00FE0B5F /* RecordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordTableViewController.swift; sourceTree = "<group>"; };
 		552B59B41F6DCD0C00B98E2A /* SleepWell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepWell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		552B59B71F6DCD0C00B98E2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		552B59B91F6DCD0C00B98E2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				552B59C01F6DCD0D00B98E2A /* LaunchScreen.storyboard */,
 				552B59C31F6DCD0D00B98E2A /* Info.plist */,
 				552B59E51F6DD33800B98E2A /* AddEntryViewController.swift */,
+				3C1501EA1F6E067000FE0B5F /* RecordTableViewCell.swift */,
+				3C1501EC1F6E0B6F00FE0B5F /* RecordTableViewController.swift */,
 			);
 			path = SleepWell;
 			sourceTree = "<group>";
@@ -264,7 +270,9 @@
 			files = (
 				552B59E61F6DD33800B98E2A /* AddEntryViewController.swift in Sources */,
 				552B59BA1F6DCD0C00B98E2A /* ViewController.swift in Sources */,
+				3C1501EB1F6E067000FE0B5F /* RecordTableViewCell.swift in Sources */,
 				552B59B81F6DCD0C00B98E2A /* AppDelegate.swift in Sources */,
+				3C1501ED1F6E0B6F00FE0B5F /* RecordTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -405,7 +413,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -419,6 +427,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SleepWell/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sc.SleepWell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -431,6 +440,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SleepWell/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sc.SleepWell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
