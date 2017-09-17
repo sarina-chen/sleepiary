@@ -1,5 +1,5 @@
 //
-//  GoodBadSleepController.swift
+//  GoodVsBadSleepViewController.swift
 //  SleepWell
 //
 //  Created by Katharine on 2017-09-17.
@@ -8,28 +8,29 @@
 
 import UIKit
 
-class GoodBadSleepController: UIViewController {
+class GoodVsBadSleepViewController: UIViewController {
     
-    @IBOutlet weak var bestAvgLengthValue: UILabel!
-    @IBOutlet weak var bestCupsValue: UILabel!
-    @IBOutlet weak var bestExerciseValue: UILabel!
+    @IBOutlet weak var bestAvgLength: UILabel!
+    @IBOutlet weak var bestCups: UILabel!
+    @IBOutlet weak var bestExercise: UILabel!
     
-    @IBOutlet weak var worstAvgLengthValue: UILabel!
-    @IBOutlet weak var worstCupsValue: UILabel!
-    @IBOutlet weak var worstExerciseValue: UILabel!
+    @IBOutlet weak var worstAvgLength: UILabel!
+    @IBOutlet weak var worstCups: UILabel!
+    @IBOutlet weak var worstExercise: UILabel!
     
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         var bestEntries = loadEntries()
         var worstEntries = bestEntries
+        print(bestEntries?.count)
         
         if ((bestEntries?.count)! > 5) {
             bestEntries?.sort(by: sortEntriesBest)
             worstEntries?.sort(by: sortEntriesWorst)
-        
+            
             var top5BestEntries = bestEntries![0...4]
             var top5WorstEntries = worstEntries![0...4]
             
@@ -42,24 +43,27 @@ class GoodBadSleepController: UIViewController {
                 worstTimes.append(getTotalSleepTimeInMinutes(start: entry.startSleepTime, end: entry.endSleepTime))
             }
             
-            bestAvgLengthValue.text = calculateAvg(array: bestTimes).description
-            worstAvgLengthValue.text = calculateAvg(array: worstTimes).description
+            bestAvgLength.text = (calculateAvg(array: bestTimes)/60).description + " hrs"
+            worstAvgLength.text = (calculateAvg(array: worstTimes)/60).description + " hrs"
+            
+            bestCups.text = (calculateAvg(array: top5BestEntries.map{$0.cupsCoffee})).description
+            worstCups.text = (calculateAvg(array: top5WorstEntries.map{$0.cupsCoffee})).description
+            
+            bestExercise.text = (calculateAvg(array: top5BestEntries.map{$0.exerciseMinutes})).description + " mins"
+            worstExercise.text = (calculateAvg(array: top5WorstEntries.map{$0.exerciseMinutes})).description + " mins"
             
             
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     private func calculateAvg(array: [Int]) -> Float {
-        var sum = 0
-        for i in 0  ..< array.count {
-            sum += array[i]
-        }
-        return Float(sum/array.count)
+        let sum = array.reduce(0, +)
+        return Float(sum/5)
         
     }
     
@@ -85,18 +89,18 @@ class GoodBadSleepController: UIViewController {
     
     private func getTotalSleepTimeInMinutes(start: Date, end: Date) -> Int {
         let durationInSeconds = Int(end.timeIntervalSince(start))
-        return durationInSeconds / 60
+        return 1440 + (durationInSeconds / 60)
         
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
