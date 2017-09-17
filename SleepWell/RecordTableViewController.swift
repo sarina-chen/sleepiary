@@ -53,8 +53,8 @@ class RecordTableViewController: UITableViewController {
 		dateFormatter.dateStyle = .medium
 		dateFormatter.timeStyle = .none
 		
-		cell.dateLabel.text = dateFormatter.string(from: record.getRecordDate())
-		cell.photoImageView.image = getImageForRating(record.getRating())
+		cell.dateLabel.text = dateFormatter.string(from: record.getDate())
+		cell.photoImageView.image = getImageForRating(record.getQualityRating())
 		
         return cell
     }
@@ -105,21 +105,39 @@ class RecordTableViewController: UITableViewController {
     }
     */
 
-    /*
+	
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender)
+		
+		guard let selectedRecordCell = sender as? RecordTableViewCell else {
+			fatalError("Unexpected sender")
+		}
+		
+		guard let indexPath = tableView.indexPath(for: selectedRecordCell) else {
+			fatalError("Selected cell is not being displayed by table")
+		}
+		
+		guard let recordDetailViewController = segue.destination as? RecordDetailViewController else {
+			fatalError("Unexpected destination")
+	}
+	
+		let selectedRecord = records[indexPath.row]
+		recordDetailViewController.record = selectedRecord
     }
-    */
+	
+	private func loadRecords() -> [SleepEntry] {
+		return (NSKeyedUnarchiver.unarchiveObject(withFile: SleepEntry.ArchiveURL.path) as? [SleepEntry])!
+	}
+	
 
 	private func loadSampleRecords() {
 		
-		let record1 = SleepEntry(recordDate: Date(timeIntervalSinceReferenceDate: 123456789), start: Date(timeIntervalSinceReferenceDate: 123456789), end: Date(timeIntervalSinceReferenceDate: 123456789), rating: 5)
-		let record2 = SleepEntry(recordDate: Date(timeIntervalSinceReferenceDate: 1234567891), start: Date(timeIntervalSinceReferenceDate: 12345678000), end: Date(timeIntervalSinceReferenceDate: 1234563445), rating: 2)
-		let record3 = SleepEntry(recordDate: Date(timeIntervalSinceReferenceDate: 1123456789), start: Date(timeIntervalSinceReferenceDate: 2123456789), end: Date(timeIntervalSinceReferenceDate: 3123456789), rating: 1)
+		let record1 = SleepEntry(date: Date(timeIntervalSinceReferenceDate: 123456789), start: Date(timeIntervalSinceReferenceDate: 123450000), end: Date(timeIntervalSinceReferenceDate: 123460000), quality: 5, coffee: 2, exerciseMinutes: 30)
+		let record2 = SleepEntry(date: Date(timeIntervalSinceReferenceDate: 1234567891), start: Date(timeIntervalSinceReferenceDate: 123455000), end: Date(timeIntervalSinceReferenceDate: 123456000), quality: 2, coffee: 0, exerciseMinutes: 0)
+		let record3 = SleepEntry(date: Date(timeIntervalSinceReferenceDate: 1123456789), start: Date(timeIntervalSinceReferenceDate: 1123456000), end: Date(timeIntervalSinceReferenceDate: 1123459000), quality: 1, coffee: 4, exerciseMinutes: 20)
 		
 		records += [record1,record2,record3]
 	}

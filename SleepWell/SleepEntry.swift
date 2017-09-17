@@ -29,6 +29,29 @@ class SleepEntry {
         self.cupsCoffee = coffee
         self.exerciseMinutes = exerciseMinutes
     }
+	
+	func getDate() -> Date {
+		return date
+	}
+	
+	func getStartSleepTime() -> Date {
+		return startSleepTime
+	}
+	
+	func getEndSleepTime() -> Date {
+		return endSleepTime
+	}
+	
+	func getQualityRating() -> Int {
+		return qualityRating
+	}
+	func getCupsCoffee() -> Int {
+		return cupsCoffee
+	}
+	
+	func getExerciseMinutes() -> Int {
+		return exerciseMinutes
+	}
 }
 
 import UIKit
