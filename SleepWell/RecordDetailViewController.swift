@@ -58,7 +58,6 @@ class RecordDetailViewController: UIViewController {
 			stringToReturn += minutes.description + " m"
 		}
 		return stringToReturn
-		
 	}
 
     override func didReceiveMemoryWarning() {
