@@ -15,8 +15,9 @@ class RecordTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
+		loadRecords()
 		loadSampleRecords()
-
+		
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -128,8 +129,12 @@ class RecordTableViewController: UITableViewController {
 		recordDetailViewController.record = selectedRecord
     }
 	
-	private func loadRecords() -> [SleepEntry] {
-		return (NSKeyedUnarchiver.unarchiveObject(withFile: SleepEntry.ArchiveURL.path) as? [SleepEntry])!
+	private func loadRecords() {
+		let retrievedRecords = (NSKeyedUnarchiver.unarchiveObject(withFile: SleepEntry.ArchiveURL.path) as? [SleepEntry])
+		if (retrievedRecords != nil) {
+			records += retrievedRecords!
+		}
+		records += []
 	}
 	
 

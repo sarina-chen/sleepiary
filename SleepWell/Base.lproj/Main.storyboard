@@ -37,7 +37,7 @@
                                         </state>
                                         <connections>
                                             <action selector="viewHistory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EPd-z0-Ue2"/>
-                                            <segue destination="iEm-HM-5ZW" kind="show" identifier="goSeeHistory" id="AdQ-Ay-mf9"/>
+                                            <segue destination="03W-p6-yHH" kind="show" id="jdf-cY-P0T"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2B-V0-d7E">
@@ -501,4 +501,7 @@
             <point key="canvasLocation" x="621.60000000000002" y="834.33283358320841"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="jdf-cY-P0T"/>
+    </inferredMetricsTieBreakers>
 </document>
