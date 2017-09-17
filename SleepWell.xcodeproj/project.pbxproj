@@ -17,6 +17,7 @@
 		552B59E61F6DD33800B98E2A /* AddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B59E51F6DD33800B98E2A /* AddEntryViewController.swift */; };
 		552B59EA1F6E0D4200B98E2A /* ThankfulText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B59E91F6E0D4200B98E2A /* ThankfulText.swift */; };
 		CD7C6B9BDAA43BD966605FD7 /* Pods_SleepWell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE8FAB0300119024E40A24B /* Pods_SleepWell.framework */; };
+		890465D91F6DF4D900E000CA /* SleepEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890465D81F6DF4D900E000CA /* SleepEntry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		552B59E91F6E0D4200B98E2A /* ThankfulText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThankfulText.swift; sourceTree = "<group>"; };
 		87AC35CC51AC2A3FF3D1EFB6 /* Pods-SleepWell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepWell.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SleepWell/Pods-SleepWell.debug.xcconfig"; sourceTree = "<group>"; };
 		ABE8FAB0300119024E40A24B /* Pods_SleepWell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SleepWell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		890465D81F6DF4D900E000CA /* SleepEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				552B59C01F6DCD0D00B98E2A /* LaunchScreen.storyboard */,
 				552B59C31F6DCD0D00B98E2A /* Info.plist */,
 				552B59E51F6DD33800B98E2A /* AddEntryViewController.swift */,
+				890465D81F6DF4D900E000CA /* SleepEntry.swift */,
 			);
 			path = SleepWell;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 			files = (
 				552B59E61F6DD33800B98E2A /* AddEntryViewController.swift in Sources */,
 				552B59BA1F6DCD0C00B98E2A /* ViewController.swift in Sources */,
+				890465D91F6DF4D900E000CA /* SleepEntry.swift in Sources */,
 				552B59B81F6DCD0C00B98E2A /* AppDelegate.swift in Sources */,
 				552B59EA1F6E0D4200B98E2A /* ThankfulText.swift in Sources */,
 			);
