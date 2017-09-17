@@ -10,20 +10,22 @@ import Foundation
 import UIKit
 import os.log
 
-class ThankfulText : NSObject, NSCoding{
+class ThankfulText :NSObject, NSCoding{
     //MARK: Archiving Paths
-    
+
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("thankfulTexts")
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("SavedThankfulTexts")
     
     var message: String
     var date: Date
     
     //MARK: Types
+    
     struct PropertyKey{
         static let message = "message"
         static let date = "date"
     }
+ 
     
     init?(msg: String, date: Date){
         let currentDate = Date()
@@ -41,7 +43,7 @@ class ThankfulText : NSObject, NSCoding{
 
     }
     
-    
+
     //MARK: NSCoding
     func encode(with aCoder: NSCoder) {
         aCoder.encode(message, forKey: PropertyKey.message)
