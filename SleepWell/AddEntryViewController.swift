@@ -61,7 +61,11 @@ class AddEntryViewController: UIViewController {
     }
     
     private func loadEntries() -> [SleepEntry]? {
-        return NSKeyedUnarchiver.unarchiveObject(withFile: SleepEntry.ArchiveURL.path) as? [SleepEntry]
+        let entries = NSKeyedUnarchiver.unarchiveObject(withFile: SleepEntry.ArchiveURL.path) as? [SleepEntry]
+		if (entries != nil) {
+			return entries
+		}
+		return []
     }
     
     @IBAction func saveEntry(_ sender: Any) {
@@ -69,7 +73,7 @@ class AddEntryViewController: UIViewController {
         let newEntry: SleepEntry = SleepEntry.init(date: datePicker.date, start: startSleep.date, end: EndSleep.date, quality: qualityRating.selectedSegmentIndex + 1, coffee: Int(coffeeStepper.value), exerciseMinutes: Int(exerciseSlider.value))
         
         if (entries?.count == 0) {
-        entries?.append(newEntry)
+			entries?.append(newEntry)
         } else {
             entries?.insert(newEntry, at: 0)
         }
@@ -78,10 +82,19 @@ class AddEntryViewController: UIViewController {
         if isSuccessfulSave {
             os_log("Sleep entries successfully saved.", log: OSLog.default, type: .debug)
             print("\(path)")
-        } else {
+			alertSuccessAndReturnHome()
+		} else {
             os_log("Failed to save sleep entries...", log: OSLog.default, type: .error)
         }
     }
+	
+	private func alertSuccessAndReturnHome() {
+		let alertController = UIAlertController(title: "", message: "Your sleep record has been saved.", preferredStyle: UIAlertControllerStyle.alert)
+		alertController.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: { (action: UIAlertAction!) in
+			self.navigationController?.popToRootViewController(animated: true)
+		}))
+		present(alertController, animated: true, completion: nil)
+	}
     
     /*
     // MARK: - Navigation

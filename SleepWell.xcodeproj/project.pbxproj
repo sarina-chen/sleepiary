@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C1501EB1F6E067000FE0B5F /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1501EA1F6E067000FE0B5F /* RecordTableViewCell.swift */; };
+		3C1501ED1F6E0B6F00FE0B5F /* RecordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1501EC1F6E0B6F00FE0B5F /* RecordTableViewController.swift */; };
+		3C1501EF1F6E0D1B00FE0B5F /* SleepEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1501EE1F6E0D1B00FE0B5F /* SleepEntry.swift */; };
+		3C1501F11F6E392E00FE0B5F /* RecordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1501F01F6E392E00FE0B5F /* RecordDetailViewController.swift */; };
 		552B59B81F6DCD0C00B98E2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B59B71F6DCD0C00B98E2A /* AppDelegate.swift */; };
 		552B59BA1F6DCD0C00B98E2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B59B91F6DCD0C00B98E2A /* ViewController.swift */; };
 		552B59BD1F6DCD0C00B98E2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 552B59BB1F6DCD0C00B98E2A /* Main.storyboard */; };
@@ -16,8 +20,8 @@
 		552B59D81F6DCD0D00B98E2A /* SleepWellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B59D71F6DCD0D00B98E2A /* SleepWellUITests.swift */; };
 		552B59E61F6DD33800B98E2A /* AddEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B59E51F6DD33800B98E2A /* AddEntryViewController.swift */; };
 		552B59EA1F6E0D4200B98E2A /* ThankfulText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B59E91F6E0D4200B98E2A /* ThankfulText.swift */; };
+		890465E31F6EC04500E000CA /* GoodVsBadSleepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890465E21F6EC04500E000CA /* GoodVsBadSleepViewController.swift */; };
 		CD7C6B9BDAA43BD966605FD7 /* Pods_SleepWell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE8FAB0300119024E40A24B /* Pods_SleepWell.framework */; };
-		890465D91F6DF4D900E000CA /* SleepEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890465D81F6DF4D900E000CA /* SleepEntry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		264912BC350DDC4BA30C04A0 /* Pods-SleepWell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepWell.release.xcconfig"; path = "Pods/Target Support Files/Pods-SleepWell/Pods-SleepWell.release.xcconfig"; sourceTree = "<group>"; };
+		21EF4AA314F7DE2E8A5B0989 /* Pods-SleepWell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepWell.release.xcconfig"; path = "Pods/Target Support Files/Pods-SleepWell/Pods-SleepWell.release.xcconfig"; sourceTree = "<group>"; };
+		3C1501EA1F6E067000FE0B5F /* RecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
+		3C1501EC1F6E0B6F00FE0B5F /* RecordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordTableViewController.swift; sourceTree = "<group>"; };
+		3C1501EE1F6E0D1B00FE0B5F /* SleepEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepEntry.swift; sourceTree = "<group>"; };
+		3C1501F01F6E392E00FE0B5F /* RecordDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordDetailViewController.swift; sourceTree = "<group>"; };
 		552B59B41F6DCD0C00B98E2A /* SleepWell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepWell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		552B59B71F6DCD0C00B98E2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		552B59B91F6DCD0C00B98E2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,8 +63,8 @@
 		552B59E51F6DD33800B98E2A /* AddEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEntryViewController.swift; sourceTree = "<group>"; };
 		552B59E91F6E0D4200B98E2A /* ThankfulText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThankfulText.swift; sourceTree = "<group>"; };
 		87AC35CC51AC2A3FF3D1EFB6 /* Pods-SleepWell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepWell.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SleepWell/Pods-SleepWell.debug.xcconfig"; sourceTree = "<group>"; };
+		890465E21F6EC04500E000CA /* GoodVsBadSleepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodVsBadSleepViewController.swift; sourceTree = "<group>"; };
 		ABE8FAB0300119024E40A24B /* Pods_SleepWell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SleepWell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		890465D81F6DF4D900E000CA /* SleepEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				87AC35CC51AC2A3FF3D1EFB6 /* Pods-SleepWell.debug.xcconfig */,
-				264912BC350DDC4BA30C04A0 /* Pods-SleepWell.release.xcconfig */,
+				21EF4AA314F7DE2E8A5B0989 /* Pods-SleepWell.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -127,7 +135,11 @@
 				552B59C01F6DCD0D00B98E2A /* LaunchScreen.storyboard */,
 				552B59C31F6DCD0D00B98E2A /* Info.plist */,
 				552B59E51F6DD33800B98E2A /* AddEntryViewController.swift */,
-				890465D81F6DF4D900E000CA /* SleepEntry.swift */,
+				3C1501EE1F6E0D1B00FE0B5F /* SleepEntry.swift */,
+				3C1501EA1F6E067000FE0B5F /* RecordTableViewCell.swift */,
+				3C1501EC1F6E0B6F00FE0B5F /* RecordTableViewController.swift */,
+				3C1501F01F6E392E00FE0B5F /* RecordDetailViewController.swift */,
+				890465E21F6EC04500E000CA /* GoodVsBadSleepViewController.swift */,
 			);
 			path = SleepWell;
 			sourceTree = "<group>";
@@ -349,10 +361,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C1501F11F6E392E00FE0B5F /* RecordDetailViewController.swift in Sources */,
+				3C1501EF1F6E0D1B00FE0B5F /* SleepEntry.swift in Sources */,
 				552B59E61F6DD33800B98E2A /* AddEntryViewController.swift in Sources */,
 				552B59BA1F6DCD0C00B98E2A /* ViewController.swift in Sources */,
-				890465D91F6DF4D900E000CA /* SleepEntry.swift in Sources */,
+				3C1501EB1F6E067000FE0B5F /* RecordTableViewCell.swift in Sources */,
+				890465E31F6EC04500E000CA /* GoodVsBadSleepViewController.swift in Sources */,
 				552B59B81F6DCD0C00B98E2A /* AppDelegate.swift in Sources */,
+				3C1501ED1F6E0B6F00FE0B5F /* RecordTableViewController.swift in Sources */,
 				552B59EA1F6E0D4200B98E2A /* ThankfulText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,7 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -494,7 +510,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -509,6 +525,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SleepWell/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sc.SleepWell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -518,10 +535,11 @@
 		};
 		552B59DE1F6DCD0D00B98E2A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 264912BC350DDC4BA30C04A0 /* Pods-SleepWell.release.xcconfig */;
+			baseConfigurationReference = 21EF4AA314F7DE2E8A5B0989 /* Pods-SleepWell.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SleepWell/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sc.SleepWell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
